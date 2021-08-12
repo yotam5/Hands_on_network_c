@@ -100,7 +100,18 @@ int main() {
                         CLOSESOCKET(i);
                         continue;
                     }
-
+                    /* 
+                    SOCKET j;
+                    for(j = 0; j < max_socket;++j)
+                    {
+                        if(FD_ISSET(j,&master)){
+                            continue;
+                        }
+                        else{
+                            send(j, read,bytes_received,0);
+                        }
+                    }
+                    */
                     int j;
                     for (j = 0; j < bytes_received; ++j)
                         read[j] = toupper(read[j]);
